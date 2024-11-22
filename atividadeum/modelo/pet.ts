@@ -1,5 +1,5 @@
 export default class Pet {
-    private nome: string
+    public nome: string
     private tipo: string
     private raca: string
     private genero: string
