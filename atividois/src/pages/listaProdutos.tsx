@@ -1,10 +1,10 @@
 import { Component } from "react";
 import "../styles/detail.css";
 
-// Definindo o tipo Produto
+
 type Produto = {
     nome: string;
-    tipo: string;  // Produto ou Serviço
+    tipo: string;  
     preco: string;
 };
 
@@ -24,14 +24,14 @@ export default class ListaProdutos extends Component {
 
         return (
             <div className="container">
-                <h1 className="pb-4" style={{ color: '#D32F2F' }}> {/* Título vermelho */}
-                    <div className="rectangle" style={{ backgroundColor: '#D32F2F' }}></div> {/* Retângulo vermelho */}
+                <h1 className="pb-4" style={{ color: '#D32F2F' }}> 
+                    <div className="rectangle" style={{ backgroundColor: '#D32F2F' }}></div> 
                     Produtos e Serviços
                 </h1>
 
-                {/* Tabela para exibir os produtos */}
+                
                 <table className="table table-hover">
-                    <thead style={{ backgroundColor: '#D32F2F', color: 'white' }}> {/* Cabeçalho da tabela vermelho */}
+                    <thead style={{ backgroundColor: '#D32F2F', color: 'white' }}> 
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>

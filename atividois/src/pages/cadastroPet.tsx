@@ -11,13 +11,13 @@ export default function FormularioCadastroPet() {
     const handleSubmit = () => {
         const newPet = { nome, raca, genero, tipo, dono };
 
-        // Recupera a lista de pets armazenados ou cria uma nova
+        
         const storedPets = JSON.parse(localStorage.getItem('pets') || '[]');
         storedPets.push(newPet);
         localStorage.setItem('pets', JSON.stringify(storedPets));
 
         alert("Pet cadastrado!");
-        // Limpa os campos após o cadastro
+        
         setNome('');
         setRaca('');
         setGenero('');
@@ -84,7 +84,7 @@ export default function FormularioCadastroPet() {
                 <div className="input-group mb-3 d-flex justify-content-end">
                     <button
                         className="btn btn-outline-secondary"
-                        style={{ backgroundColor: "#D32F2F", color: "#fff" }} // Botão vermelho
+                        style={{ backgroundColor: "#D32F2F", color: "#fff" }}
                         type="button"
                         onClick={handleSubmit}
                     >
@@ -93,7 +93,7 @@ export default function FormularioCadastroPet() {
                 </div>
             </form>
 
-            {/* Tabela para exibir os pets */}
+            
             <table className="table table-hover">
                 <thead style={{ backgroundColor: '#D32F2F', color: '#fff' }}> {/* Cabeçalho da tabela vermelho */}
                     <tr>
@@ -106,8 +106,8 @@ export default function FormularioCadastroPet() {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* Aqui você pode mapear os pets cadastrados */}
-                    {/* Exemplo com dados estáticos */}
+                    
+                    
                     <tr>
                         <td>1</td>
                         <td>Rex</td>
@@ -116,7 +116,7 @@ export default function FormularioCadastroPet() {
                         <td>Cão</td>
                         <td>João</td>
                     </tr>
-                    {/* Se você estiver usando localStorage, insira o mapeamento dos dados */}
+                   
                 </tbody>
             </table>
         </div>

@@ -23,14 +23,14 @@ export default function FormularioCadastroCliente() {
         };
 
         if (temOutroPet) {
-            newClient.pets.push({ nome: '' }); // Podemos adicionar mais pets depois se desejar.
+            newClient.pets.push({ nome: '' }); 
         }
 
         const storedClients = JSON.parse(localStorage.getItem('clientes') || '[]');
         storedClients.push(newClient);
         localStorage.setItem('clientes', JSON.stringify(storedClients));
         alert("Cliente cadastrado!");
-    }
+    };
 
     return (
         <div className="container">
@@ -66,7 +66,18 @@ export default function FormularioCadastroCliente() {
                     <label className="form-check-label" htmlFor="temOutroPet">Deseja cadastrar outro pet?</label>
                 </div>
                 <div className="input-group mb-3 d-flex justify-content-end">
-                    <button className="btn btn-outline-secondary" style={{ backgroundColor: "#4D7A8C", color: "#fff" }} type="button" onClick={handleSubmit}>Cadastrar</button>
+                    <button 
+                        className="btn btn-outline-secondary" 
+                        style={{ 
+                            backgroundColor: "#D32F2F", // Vermelho
+                            color: "#fff", 
+                            borderColor: "#D32F2F" // Adiciona borda vermelha
+                        }} 
+                        type="button" 
+                        onClick={handleSubmit}
+                    >
+                        Cadastrar
+                    </button>
                 </div>
             </form>
         </div>

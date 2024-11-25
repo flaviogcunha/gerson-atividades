@@ -4,7 +4,7 @@ import "../styles/detail.css";
 // Definindo o tipo Produto
 type Produto = {
     nome: string;
-    tipo: string;  // Produto ou Serviço
+    tipo: string; // Produto ou Serviço
     preco: string;
 };
 
@@ -16,29 +16,24 @@ export default class CadastroProdutos extends Component {
         produtos: [] as Produto[],
     };
 
-    
     componentDidMount() {
         const storedProdutos = JSON.parse(localStorage.getItem('produtos') || '[]');
         this.setState({ produtos: storedProdutos });
     }
 
-  
     handleSubmit = () => {
         const { nome, tipo, preco, produtos } = this.state;
         const newProduto = { nome, tipo, preco };
 
-       
         const updatedProdutos = [...produtos, newProduto];
         this.setState({ produtos: updatedProdutos });
 
-        
         localStorage.setItem('produtos', JSON.stringify(updatedProdutos));
 
-        
         this.setState({ nome: '', tipo: '', preco: '' });
 
         alert("Produto cadastrado!");
-    }
+    };
 
     render() {
         const { nome, tipo, preco, produtos } = this.state;
@@ -82,10 +77,10 @@ export default class CadastroProdutos extends Component {
                         />
                     </div>
                     <div className="input-group mb-3 d-flex justify-content-end">
-                        <button 
-                            className="btn btn-outline-secondary" 
-                            type="submit" 
-                            style={{ backgroundColor: "#D32F2F", color: "#fff" }}  // Alterado para vermelho
+                        <button
+                            className="btn btn-outline-secondary"
+                            type="submit"
+                            style={{ backgroundColor: "#D32F2F", color: "#fff" }} // Alterado para vermelho
                         >
                             Cadastrar
                         </button>
@@ -95,7 +90,7 @@ export default class CadastroProdutos extends Component {
                 {/* Tabela para exibir os produtos */}
                 <table className="table table-hover">
                     <thead>
-                        <tr style={{ backgroundColor: '#4D7A8C', color: "white" }}>
+                        <tr style={{ backgroundColor: '#D32F2F', color: "white" }}> {/* Cabeçalho vermelho */}
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Tipo</th>
@@ -105,7 +100,7 @@ export default class CadastroProdutos extends Component {
                     <tbody>
                         {produtos.length > 0 ? (
                             produtos.map((produto, index) => (
-                                <tr key={index}>
+                                <tr key={index} style={{ backgroundColor: "#FFFFFF" }}> {/* Linhas em tom claro de vermelho */}
                                     <td>{index + 1}</td>
                                     <td>{produto.nome}</td>
                                     <td>{produto.tipo}</td>
@@ -113,7 +108,7 @@ export default class CadastroProdutos extends Component {
                                 </tr>
                             ))
                         ) : (
-                            <tr>
+                            <tr style={{ backgroundColor: "#F9D6D5" }}>
                                 <td colSpan={4} className="text-center">Nenhum produto cadastrado</td>
                             </tr>
                         )}
