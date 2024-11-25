@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import '../styles/detail.css';
 
 const CadastroCompras = () => {
-  // Estado para armazenar os produtos comprados e o valor total
+  
   const [produtosComprados, setProdutosComprados] = useState<any[]>([]);
   const [produtoNome, setProdutoNome] = useState('');
   const [produtoPreco, setProdutoPreco] = useState(0);
   const [clienteId, setClienteId] = useState('');
 
-  // Função para adicionar um produto à lista de compras
+  
   const handleAddProduct = () => {
     if (produtoNome && produtoPreco > 0) {
       const novoProduto = { nome: produtoNome, preco: produtoPreco };
       setProdutosComprados([...produtosComprados, novoProduto]);
 
-      // Limpar os campos de entrada após adicionar o produto
+    
       setProdutoNome('');
       setProdutoPreco(0);
     } else {
@@ -22,10 +22,10 @@ const CadastroCompras = () => {
     }
   };
 
-  // Função para calcular o valor total das compras
+ 
   const valorTotal = produtosComprados.reduce((acc, produto) => acc + produto.preco, 0);
 
-  // Função para salvar a compra (exemplo de como você pode salvar no localStorage ou API)
+  
   const handleSaveCompra = () => {
     if (clienteId && produtosComprados.length > 0) {
       const compra = {
@@ -35,13 +35,13 @@ const CadastroCompras = () => {
         data: new Date().toLocaleString(),
       };
 
-      // Salvar a compra (aqui estamos usando o localStorage como exemplo)
+      
       const comprasAnteriores = JSON.parse(localStorage.getItem('compras') || '[]');
       comprasAnteriores.push(compra);
       localStorage.setItem('compras', JSON.stringify(comprasAnteriores));
 
       alert('Compra registrada com sucesso!');
-      setProdutosComprados([]); // Limpar os produtos comprados após salvar
+      setProdutosComprados([]); 
     } else {
       alert('Por favor, adicione produtos e informe o cliente.');
     }

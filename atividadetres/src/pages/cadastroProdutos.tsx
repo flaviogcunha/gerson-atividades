@@ -8,13 +8,13 @@ const FormularioCadastroProduto = () => {
   const handleSubmit = () => {
     const novoProduto = { nome, tipo, preco };
     
-    // Salvando no localStorage (ou poderia ser uma API)
+    
     const produtosAnteriores = JSON.parse(localStorage.getItem('produtos') || '[]');
     produtosAnteriores.push(novoProduto);
     localStorage.setItem('produtos', JSON.stringify(produtosAnteriores));
 
     alert("Produto cadastrado com sucesso!");
-    // Resetando campos
+ 
     setNome('');
     setTipo('');
     setPreco(0);

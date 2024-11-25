@@ -10,13 +10,13 @@ const FormularioCadastroPet = () => {
   const handleSubmit = () => {
     const novoPet = { nome, raca, genero, tipo, dono };
 
-    // Salvando no localStorage (ou poderia ser uma API)
+    
     const petsAnteriores = JSON.parse(localStorage.getItem('pets') || '[]');
     petsAnteriores.push(novoPet);
     localStorage.setItem('pets', JSON.stringify(petsAnteriores));
 
     alert("Pet cadastrado com sucesso!");
-    // Resetando campos
+  
     setNome('');
     setRaca('');
     setGenero('');

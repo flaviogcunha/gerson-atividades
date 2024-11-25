@@ -7,18 +7,18 @@ const FormularioCadastroCliente = () => {
   const [telefone, setTelefone] = useState('');
   const [cpf, setCpf] = useState('');
   const [rg, setRg] = useState('');
-  const [pets, setPets] = useState<any[]>([]); // Lista de pets associados ao cliente
+  const [pets, setPets] = useState<any[]>([]); 
 
   const handleSubmit = () => {
     const novoCliente = { nome, nomeSocial, email, telefone, cpf, rg, pets };
     
-    // Salvando no localStorage (ou poderia ser uma API)
+    
     const clientesAnteriores = JSON.parse(localStorage.getItem('clientes') || '[]');
     clientesAnteriores.push(novoCliente);
     localStorage.setItem('clientes', JSON.stringify(clientesAnteriores));
 
     alert("Cliente cadastrado com sucesso!");
-    // Resetando campos
+    
     setNome('');
     setNomeSocial('');
     setEmail('');

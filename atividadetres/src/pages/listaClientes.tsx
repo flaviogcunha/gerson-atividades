@@ -17,8 +17,8 @@ interface Cliente {
 
 export default class ListaClientes extends Component {
   state = {
-    clientes: [] as Cliente[], // Inicializa o array de clientes
-    error: null, // Estado para capturar erros
+    clientes: [] as Cliente[], 
+    error: null, 
   };
 
   componentDidMount() {
@@ -27,11 +27,10 @@ export default class ListaClientes extends Component {
       if (storedClients) {
         const clientes = JSON.parse(storedClients);
 
-        // Valida a estrutura dos clientes para evitar problemas
         if (Array.isArray(clientes)) {
           const validClientes = clientes.map((cliente) => ({
             ...cliente,
-            pets: Array.isArray(cliente.pets) ? cliente.pets : [], // Garante que pets seja um array
+            pets: Array.isArray(cliente.pets) ? cliente.pets : [], 
           }));
           this.setState({ clientes: validClientes });
         } else {
@@ -48,7 +47,7 @@ export default class ListaClientes extends Component {
   render() {
     const { clientes, error } = this.state;
 
-    // Exibe uma mensagem de erro se algo deu errado
+    
     if (error) {
       return <div className="container text-danger">Erro: {error}</div>;
     }

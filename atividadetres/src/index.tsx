@@ -9,9 +9,9 @@ import ListaClientes from './pages/listaClientes';
 import ListaPets from './pages/listaPets';
 import ListaProdutos from './pages/listaProdutos';
 import FormularioCadastroCliente from './pages/formularioCadastroCliente';
-import FormularioCadastroPet from './pages/cadastroPet';  // Importação do cadastro de pets
-import FormularioCadastroProduto from './pages/cadastroProdutos';  // Importação do cadastro de produtos
-import CadastroCompras from './pages/CadastroCompras';  // Importando o Cadastro de Compras (se for o caso)
+import FormularioCadastroPet from './pages/cadastroPet';  
+import FormularioCadastroProduto from './pages/cadastroProdutos';  
+import CadastroCompras from './pages/CadastroCompras';  
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,9 +26,9 @@ root.render(
           <Route path="/produtos" element={<ListaProdutos />} />
           <Route path="/pets" element={<ListaPets />} />
           <Route path="/cadastro" element={<FormularioCadastroCliente />} />
-          <Route path="/cadastro-pet" element={<FormularioCadastroPet />} /> {/* Rota para cadastro de pets */}
-          <Route path="/cadastro-produto" element={<FormularioCadastroProduto />} /> {/* Rota para cadastro de produtos */}
-          <Route path="/cadastro-compra" element={<CadastroCompras />} /> {/* Rota para Cadastro de Compras */}
+          <Route path="/cadastro-pet" element={<FormularioCadastroPet />} /> {}
+          <Route path="/cadastro-produto" element={<FormularioCadastroProduto />} /> {}
+          <Route path="/cadastro-compra" element={<CadastroCompras />} /> {}
         </Route>
       </Routes>
     </BrowserRouter>
