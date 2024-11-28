@@ -5,7 +5,7 @@ import "../styles/detail.css";
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar custom-bg-color sticky-top mb-5" style={{ backgroundColor: "#D32F2F" }}>
+            <nav className="navbar custom-bg-color sticky-top mb-5" style={{ backgroundColor: "#FF0000" }}>
                 <div className="container-fluid">
                     {/* Contêiner flex para centralizar o nome "PetLovers" sem afetar o menu hamburguer */}
                     <div className="d-flex justify-content-between w-100">

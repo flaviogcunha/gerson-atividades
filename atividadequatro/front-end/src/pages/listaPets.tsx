@@ -27,8 +27,8 @@ export default class ListaPets extends Component {
 
         return (
             <div className="container">
-                <h1 className="pb-4" style={{ color: '#D32F2F' }}> {/* Título vermelho */}
-                    <div className="rectangle" style={{ backgroundColor: '#D32F2F' }}></div> {/* Retângulo vermelho */}
+                <h1 className="pb-4" style={{ color: 'white' }}> {/* Título vermelho */}
+                    <div className="rectangle" style={{ backgroundColor: '#FF0000' }}></div> {/* Retângulo vermelho */}
                     Cadastro de Pets
                 </h1>
                 <table className="table table-hover">

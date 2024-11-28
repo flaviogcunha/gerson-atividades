@@ -191,7 +191,7 @@ const CadastroClientes: React.FC = () => {
                 </div>
             </fieldset>
             <div className="row justify-content-end">
-                <button type="submit" className="col-md-3 btn btn-success custom-btn"  style={{ backgroundColor: "#4D7A8C", color: "#fff", width:"160px" }}> Salvar alterações</button>
+                <button type="submit" className="col-md-3 btn btn-success custom-btn"  style={{ backgroundColor: "#FF0000", color: "#fff", width:"160px" }}> Salvar alterações</button>
             </div>
         </form>
     )

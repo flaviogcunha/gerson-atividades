@@ -25,13 +25,13 @@ export default class ListaProdutos extends Component {
         return (
             <div className="container">
                 <h1 className="pb-4" style={{ color: '#D32F2F' }}> 
-                    <div className="rectangle" style={{ backgroundColor: '#D32F2F' }}></div> 
+                    <div className="rectangle" style={{ backgroundColor: '#FF0000' }}></div> 
                     Produtos e Serviços
                 </h1>
 
                 
                 <table className="table table-hover">
-                    <thead style={{ backgroundColor: '#D32F2F', color: 'white' }}> 
+                    <thead style={{ backgroundColor: '#FF0000', color: 'white' }}> 
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
